@@ -1,31 +1,31 @@
-import { Button } from './ui/button';
-import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Button } from "./ui/button";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 export function FooterSection() {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const navLinks = [
-    { href: '#services', label: 'Услуги' },
-    { href: '#cases', label: 'Кейсы' },
-    { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Контакты' }
+    { href: "#services", label: "Услуги" },
+    { href: "#cases", label: "Кейсы" },
+    { href: "#faq", label: "FAQ" },
+    { href: "#contact", label: "Контакты" },
   ];
 
   const legalLinks = [
-    { href: '#', label: 'Политика конфиденциальности' },
-    { href: '#', label: 'Пользовательское соглашение' },
-    { href: '#', label: 'Публичная оферта' }
+    { href: "#", label: "Политика конфиденциальности" },
+    { href: "#", label: "Пользовательское соглашение" },
+    { href: "#", label: "Публичная оферта" },
   ];
 
   return (
@@ -39,31 +39,39 @@ export function FooterSection() {
                 <span className="text-white font-bold">TCI</span>
               </div>
               <div>
-                <div className="font-bold text-xl">Tender Consulting Invest</div>
+                <div className="font-bold text-xl">
+                  Tender Consulting Invest
+                </div>
               </div>
             </div>
             <p className="text-white/80 mb-8 leading-relaxed max-w-md">
-              Тендеры и инвестиции под ключ — планируем стратегию, готовим документы 
-              и доводим до результата с прозрачными показателями.
+              Тендеры и инвестиции под ключ — планируем стратегию, готовим
+              документы и доводим до результата с прозрачными показателями.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/80">
                 <Phone className="h-4 w-4 text-[#2B7BFF]" />
-                <a href="tel:+77771234567" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+77771234567"
+                  className="hover:text-white transition-colors"
+                >
                   +7 (777) 123-45-67
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-white/80">
                 <Mail className="h-4 w-4 text-[#2B7BFF]" />
-                <a href="mailto:info@tci.kz" className="hover:text-white transition-colors">
+                <a
+                  href="mailto:info@tci.kz"
+                  className="hover:text-white transition-colors"
+                >
                   info@tci.kz
                 </a>
               </div>
               <div className="flex items-start space-x-3 text-white/80">
                 <MapPin className="h-4 w-4 text-[#2B7BFF] mt-1 flex-shrink-0" />
-                <span>г. Алматы, пр. Достык, 210<br />БЦ "Koktem Grand", 15 этаж</span>
+                <span>г. Астана, пр. Туран, 55/7</span>
               </div>
             </div>
           </div>
@@ -108,9 +116,9 @@ export function FooterSection() {
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               {legalLinks.map((link, index) => (
-                <a 
+                <a
                   key={index}
-                  href={link.href} 
+                  href={link.href}
                   className="text-white/60 hover:text-white transition-colors"
                 >
                   {link.label}
@@ -121,8 +129,8 @@ export function FooterSection() {
 
           {/* Back to Top */}
           <div className="text-center mt-8">
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               onClick={scrollToTop}
               className="text-white/80 hover:text-white hover:bg-white/10 rounded-xl"
             >
@@ -135,7 +143,9 @@ export function FooterSection() {
         <div className="border-t border-white/10 mt-8 pt-8">
           <div className="grid md:grid-cols-4 gap-6 text-center text-white/60 text-sm">
             <div>
-              <div className="font-semibold text-[#0F7B6C] mb-1">100+ процедур</div>
+              <div className="font-semibold text-[#0F7B6C] mb-1">
+                100+ процедур
+              </div>
               <div>Завершённых успешно</div>
             </div>
             <div>

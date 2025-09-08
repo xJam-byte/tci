@@ -1,16 +1,17 @@
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
-import { Textarea } from './ui/textarea';
-import { Checkbox } from './ui/checkbox';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import React from "react";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Textarea } from "./ui/textarea";
+import { Checkbox } from "./ui/checkbox";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted');
+    console.log("Form submitted");
   };
 
   return (
@@ -21,7 +22,8 @@ export function ContactSection() {
             Обсудим ваш тендер или проект?
           </h2>
           <p className="text-[#6B7280] max-w-3xl mx-auto">
-            Оставьте контакты, мы вернёмся с экспресс-оценкой по вашему тендеру в течение 2 часов в рабочее время
+            Оставьте контакты, мы вернёмся с экспресс-оценкой по вашему тендеру
+            в течение 2 часов в рабочее время
           </p>
         </div>
 
@@ -40,75 +42,85 @@ export function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-[#374151]">Имя *</Label>
-                    <Input 
-                      id="name" 
+                    <Label htmlFor="name" className="text-[#374151]">
+                      Имя *
+                    </Label>
+                    <Input
+                      id="name"
                       placeholder="Ваше имя"
                       className="border-[#E5E7EB] focus:border-[#2B7BFF] focus:ring-[#2B7BFF]/20"
-                      required 
+                      required
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="company" className="text-[#374151]">Компания *</Label>
-                    <Input 
-                      id="company" 
+                    <Label htmlFor="company" className="text-[#374151]">
+                      Компания *
+                    </Label>
+                    <Input
+                      id="company"
                       placeholder="Название компании"
                       className="border-[#E5E7EB] focus:border-[#2B7BFF] focus:ring-[#2B7BFF]/20"
-                      required 
+                      required
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-[#374151]">Email *</Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
+                  <Label htmlFor="email" className="text-[#374151]">
+                    Email *
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
                     placeholder="your@company.com"
                     className="border-[#E5E7EB] focus:border-[#2B7BFF] focus:ring-[#2B7BFF]/20"
-                    required 
+                    required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-[#374151]">Телефон *</Label>
-                  <Input 
-                    id="phone" 
-                    type="tel" 
+                  <Label htmlFor="phone" className="text-[#374151]">
+                    Телефон *
+                  </Label>
+                  <Input
+                    id="phone"
+                    type="tel"
                     placeholder="+7 (___) ___-__-__"
                     className="border-[#E5E7EB] focus:border-[#2B7BFF] focus:ring-[#2B7BFF]/20"
-                    required 
+                    required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-[#374151]">Комментарий</Label>
-                  <Textarea 
-                    id="message" 
+                  <Label htmlFor="message" className="text-[#374151]">
+                    Комментарий
+                  </Label>
+                  <Textarea
+                    id="message"
                     placeholder="Расскажите о вашем тендере или проекте..."
                     className="min-h-24 border-[#E5E7EB] focus:border-[#2B7BFF] focus:ring-[#2B7BFF]/20"
                   />
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Checkbox 
-                    id="agreement" 
+                  <Checkbox
+                    id="agreement"
                     className="mt-0.5 border-[#E5E7EB] data-[state=checked]:bg-[#2B7BFF] data-[state=checked]:border-[#2B7BFF]"
-                    required 
+                    required
                   />
-                  <Label 
-                    htmlFor="agreement" 
+                  <Label
+                    htmlFor="agreement"
                     className="text-sm text-[#6B7280] leading-relaxed cursor-pointer"
                   >
-                    Соглашаюсь с обработкой персональных данных и{' '}
+                    Соглашаюсь с обработкой персональных данных и{" "}
                     <a href="#" className="text-[#2B7BFF] hover:underline">
                       политикой конфиденциальности
                     </a>
                   </Label>
                 </div>
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   className="w-full bg-[#2B7BFF] hover:bg-[#1E3A8A] h-12 rounded-xl font-semibold"
                 >
                   Отправить заявку
@@ -138,7 +150,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#0B132B]">Телефон</div>
-                    <a 
+                    <a
                       href="tel:+77771234567"
                       className="text-[#2B7BFF] hover:underline"
                     >
@@ -153,7 +165,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#0B132B]">Email</div>
-                    <a 
+                    <a
                       href="mailto:info@tci.kz"
                       className="text-[#2B7BFF] hover:underline"
                     >
@@ -169,8 +181,7 @@ export function ContactSection() {
                   <div>
                     <div className="font-semibold text-[#0B132B]">Офис</div>
                     <div className="text-[#6B7280]">
-                      г. Алматы, проспект Достык, 210<br />
-                      БЦ "Koktem Grand", 15 этаж
+                      г. Астана, проспект Туран, 55/7
                     </div>
                   </div>
                 </div>
@@ -186,7 +197,7 @@ export function ContactSection() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <Button 
+                  <Button
                     variant="outline"
                     className="h-12 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
                     asChild
@@ -196,7 +207,7 @@ export function ContactSection() {
                       WhatsApp
                     </a>
                   </Button>
-                  <Button 
+                  <Button
                     variant="outline"
                     className="h-12 border-[#0088cc] text-[#0088cc] hover:bg-[#0088cc] hover:text-white"
                     asChild
@@ -220,11 +231,15 @@ export function ContactSection() {
               <CardContent className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-[#6B7280]">Понедельник - Пятница</span>
-                  <span className="font-semibold text-[#0B132B]">9:00 - 18:00</span>
+                  <span className="font-semibold text-[#0B132B]">
+                    9:00 - 18:00
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-[#6B7280]">Суббота</span>
-                  <span className="font-semibold text-[#0B132B]">10:00 - 15:00</span>
+                  <span className="font-semibold text-[#0B132B]">
+                    10:00 - 15:00
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-[#6B7280]">Воскресенье</span>
@@ -240,15 +255,17 @@ export function ContactSection() {
           </div>
         </div>
 
-        {/* Map placeholder - could be replaced with actual map */}
         <div className="mt-16">
           <Card className="shadow-lg border-0 overflow-hidden">
-            <div className="h-64 bg-gradient-to-br from-[#E5E7EB] to-[#D1D5DB] flex items-center justify-center">
-              <div className="text-center text-[#6B7280]">
-                <MapPin className="h-12 w-12 mx-auto mb-4 text-[#2B7BFF]" />
-                <p className="font-semibold">Карта офиса</p>
-                <p className="text-sm">БЦ "Koktem Grand", Алматы</p>
-              </div>
+            <div className="relative h-64 w-full">
+              <iframe
+                title="Карта офиса — Tender Consulting, Астана"
+                src="https://www.google.com/maps?q=%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0,%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%A2%D1%83%D1%80%D0%B0%D0%BD%2055/7&output=embed"
+                className="absolute inset-0 h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </Card>
         </div>
